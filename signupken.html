@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authentication</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <form id="signup-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+    /* Common styles */
+h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Media queries for mobile responsiveness */
+  @media only screen and (max-width: 600px) {
+    form {
+      padding: 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      margin-bottom: 10px;
+    }
+  }
+  
+</style>
+
+<script>
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents the form from being submitted
+      
+        // Retrieve the username and password values
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+      
+        // Here, you can perform any necessary validation or send the data to a server for processing
+      
+        // Redirect the user to the login page
+        window.location.href = "login.html";
+      });
+      
+</script>

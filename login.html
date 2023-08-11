@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('https://cdn.fansshare.com/image/wallpaperdesktop/cool-funky-backgrounds-for-boys-cool-1072060131.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+  
+      @media (max-width: 600px) {
+        body {
+          background-size: contain;
+          background-position: center;
+        }
+      }
+
+
+    .container {
+      margin: 100px auto;
+      width: 80%;
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4267B2;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #39599F;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 50px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Facebook Login</h1>
+    <form>
+      <input type="text" placeholder="Email or Phone">
+      <input type="password" placeholder="Password">
+      <input type="submit" value="Log In">
+    </form>
+  </div>
+</body>
+<script>
+    // JavaScript code here
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get input values
+      var email = document.getElementById("emailInput").value;
+      var password = document.getElementById("passwordInput").value;
+
+      // Perform basic validation
+      if (email.trim() === "") {
+        alert("Please enter your email or phone number.");
+        return;
+      }
+
+      if (password.trim() === "") {
+        alert("Please enter your password.");
+        return;
+      }
+
+      // Perform further authentication or form submission logic here
+      // ...
+    });
+  </script>
+</html>

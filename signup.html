@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+      background-color: #1877f2;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    @media only screen and (max-width: 600px) {
+      form {
+        max-width: 300px;
+      }
+      
+      input[type="submit"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Create a New Account</h1>
+  <form>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required>
+    
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <input type="submit" value="Sign Up">
+  </form>
+</body>
+<script>
+    function validateForm() {
+      var fname = document.getElementById("fname").value;
+      var lname = document.getElementById("lname").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      
+      if (fname === "" || lname === "" || email === "" || password === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+      
+      // Add additional validation logic if needed
+      
+      return true;
+    }
+  </script>
+</html>
